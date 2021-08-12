@@ -1,2 +1,1 @@
-# gcp-devops-demo
-GCP DevOps Stack Demo
+## GCP DevOps Stack Demo
