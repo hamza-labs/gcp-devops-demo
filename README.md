@@ -1,7 +1,11 @@
 ## Welcome to GCP DevOps Demo Project 
-
-This is a practice demonstration for this article 
+The GCP DevOps Demo project is a step by step guide to test DevOps Stack detailled in this article. 
 - https://medium.com/p/8d8fafffff83/edit 
+
+## Let's first clone the repo and test it locally 
+```
+In this Demonstration, we will be using the famous pet clinic Java Spring Boot Application. 
+git clone https://github.com/hamza-labs/pdf-demo.git  
 
 Create your GCP project  
 Let's create a GCP project, (required to use Google Cloud, and forms the basis for creating, enabling, and using all Google Cloud services, managing APIs, enabling billing, adding and removing collaborators, and managing permissions) 
@@ -26,3 +30,27 @@ First, let's configure Cloud Build to build and store Docker images. 
 cd projects/gcp-developer-workflow
 gcloud config get-value project
 gcloud builds submit --tag gcr.io/gcp-developer-workflow/helloworld .
+
+
+```
+
+## Using Docker! and run the application Locally
+```
+docker build . -t pdf
+docker run -p 8080:8080 pdf
+http://localhost:8080
+```
+
+## Let's now build and push the container image to Google Cloud Container registry using Cloud Build
+```
+gcloud builds submit -t gcr.io/hamza-labs-332005/pdf	 
+gcloud container images list --repository=gcr.io/hamza-labs-332005
+```
+
+## Now let's deploy the app to Cloud Run manually (no CI/CD)
+``` 
+gcloud beta run deploy --image gcr.io/hamza-labs-332005/pdf
+```
+
+## Let's create a Trigger in Cloud Build and connect with GitHub 
+console.cloud.google.com
