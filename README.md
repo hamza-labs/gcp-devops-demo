@@ -1,7 +1,6 @@
 ## Welcome to this quick demo used to demonstrate the Google Cloud DevOps Toolchain! 
 
 
-
 ## Option A; Clone and Test your Petclinic app locally with the in-memory HyperSQL database.
 ```
 git clone 
