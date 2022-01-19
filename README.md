@@ -1,56 +1,75 @@
-## Welcome to GCP DevOps Demo Project 
-The GCP DevOps Demo project is a step by step guide to test DevOps Stack detailled in this article. 
-- https://medium.com/p/8d8fafffff83/edit 
+# Welcome to this quick demo used to demonstrate the Google Cloud DevOps Toolchain! 
 
-## Let's first clone the repo and test it locally 
+## Option A; Clone and Test your Petclinic app locally with the in-memory HyperSQL database.
 ```
-In this Demonstration, we will be using the famous pet clinic Java Spring Boot Application. 
-git clone https://github.com/hamza-labs/pdf-demo.git  
-
-Create your GCP project  
-Let's create a GCP project, (required to use Google Cloud, and forms the basis for creating, enabling, and using all Google Cloud services, managing APIs, enabling billing, adding and removing collaborators, and managing permissions) 
-Go to console.google.com
-Open your Cloud Shell 
-gcloud init 
-Create a new configuration 
-Choose your email and create a project using this command line
-gcloud project create gcp-developer-workflow
-Create your git Repo using Google Cloud Source Repositories
-Let's create a git repo using Cloud Source Repositories service, a single place to store, manage, and track code.
-gcloud source repos create gcp-developer-workflow
-mkdir projects && cd projects 
-gcloud source repos clone gcp-developer-workflow --project=gcp-developer-workflow
-cd gcp-developer-workflow
-go mod init example.com/helloworld
-nano helloworld.go 
-git add . && git commit -m "adding my first go app file"
-git push -u origin master
-Cloud Build for Continuous integration and continuous delivery
-First, let's configure Cloud Build to build and store Docker images. 
-cd projects/gcp-developer-workflow
-gcloud config get-value project
-gcloud builds submit --tag gcr.io/gcp-developer-workflow/helloworld .
-
-
+git clone 
+cd petclinic-demo
+./gradlew bootRun
+curl localhost:8080
+```
+## Option B; Clone and Test your Petclinic app locally using Docker with the in-memory HyperSQL database.
+```
+git clone 
+cd petclinic-demo
+./gradlew bootBuildImage --imageName=petclinic-demo
+docker images 
+docker run -p 8080:8080 -t petclinic-demo
+docker ps 
 ```
 
-## Using Docker! and run the application Locally
+## How to Create your First Google Cloud Repository
 ```
-docker build . -t pdf
-docker run -p 8080:8080 pdf
-http://localhost:8080
-```
-
-## Let's now build and push the container image to Google Cloud Container registry using Cloud Build
-```
-gcloud builds submit -t gcr.io/hamza-labs-332005/pdf	 
-gcloud container images list --repository=gcr.io/hamza-labs-332005
+gcloud source repos create petclinic-demo
+cd ~/projects/
+gcloud source repos clone petclinic-demo
+git add .
+git commit -m "First Push"
+git push origin master
 ```
 
-## Now let's deploy the app to Cloud Run manually (no CI/CD)
-``` 
-gcloud beta run deploy --image gcr.io/hamza-labs-332005/pdf
+## Create your Cloud SQL Instance for the Petclinic Demo App
+```
+./gradlew build
+gcloud sql instances create pet-clinic-mysql-instance
+gcloud sql databases create petclinic --instance pet-clinic-mysql-instance
+gcloud sql instances describe pet-clinic-mysql-instance | grep connectionName
+hamza-labs-1:us-central1:pet-clinic-mysql-instance
 ```
 
-## Let's create a Trigger in Cloud Build and connect with GitHub 
-console.cloud.google.com
+## Configure your Spring Boot App to Use Cloud SQL (MYSQL)
+- Update your Gradle Configuration 
+```
+
+```
+
+- Update your application-mysql.properties
+```
+
+```
+
+## Create your GKE Autopilot Plateform 
+```
+gcloud container --project "hamza-labs-1" clusters create-auto "gke-autopilot-cluster" --region "us-central1" --release-channel "regular" --network "projects/hamza-labs-1/global/networks/default" --subnetwork "projects/hamza-labs-1/regions/us-central1/subnetworks/default" --cluster-ipv4-cidr "/17" --services-ipv4-cidr "/22"
+```
+
+## Build your Artificats using Cloud Build 
+```
+gcloud artifacts repositories create petclinic-demo-repo --repository-format=maven --location=us-central1
+gcloud iam service-accounts create artifact-registry-sa --description="sa-for-artifact-registry" --display-name="SA_AR"
+gcloud artifacts repositories add-iam-policy-binding petclinic-demo-repo --location=us-central1 --member=serviceAccount: 	 --role=roles/artifactregistry.writer
+gcloud artifacts repositories add-iam-policy-binding petclinic-demo --location=us-central1 --member=serviceAccount:artifact-registry-sa@hamza-labs-1.iam.gserviceaccount.com --role=roles/artifactregistry.writer
+
+
+```
+
+## Store Your artifacts in Google Artifact Registry 
+```
+```
+
+## Deploy your app in GKE Autopilot using Cloud Deploy
+```
+```
+
+## Operate your app using Cloud Operations
+```
+```
