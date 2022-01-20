@@ -1,4 +1,4 @@
-## Welcome to this quick demo used to demonstrate the Google Cloud DevOps Toolchain! 
+## Google Cloud DevOps Toolchain! 
 ![alt text](https://github.com/hamza-labs/gcp-devops-demo/blob/main/img/devops-stack.png?raw=true)
 
 
