@@ -2,7 +2,7 @@
 ![alt text](https://github.com/hamza-labs/gcp-devops-demo/blob/main/img/devops-stack.png?raw=true)
 
 
-## Option A Clone and Test your Petclinic app locally with the in-memory HyperSQL DB
+### Option A Clone and Test your Petclinic app locally with the in-memory HyperSQL DB
 ```
 git clone 
 cd petclinic-demo
@@ -19,7 +19,7 @@ docker run -p 8080:8080 -t petclinic-demo
 docker ps 
 ```
 
-## How to Create your First Google Cloud Repository
+### How to Create your First Google Cloud Repository
 ```
 gcloud source repos create petclinic-demo
 cd ~/projects/
@@ -29,7 +29,7 @@ git commit -m "First Push"
 git push origin master
 ```
 
-## Create your Cloud SQL Instance for the Petclinic Demo App
+### Create your Cloud SQL Instance for the Petclinic Demo App
 ```
 ./gradlew build
 gcloud sql instances create pet-clinic-mysql-instance
@@ -38,7 +38,7 @@ gcloud sql instances describe pet-clinic-mysql-instance | grep connectionName
 hamza-labs-1:us-central1:pet-clinic-mysql-instance
 ```
 
-## Configure your Spring Boot App to Use Cloud SQL (MYSQL)
+### Configure your Spring Boot App to Use Cloud SQL (MYSQL)
 - Update your Gradle Configuration 
 ```
 
@@ -49,12 +49,12 @@ hamza-labs-1:us-central1:pet-clinic-mysql-instance
 
 ```
 
-## Create your GKE Autopilot Plateform 
+### Create your GKE Autopilot Plateform 
 ```
 gcloud container --project "hamza-labs-1" clusters create-auto "gke-autopilot-cluster" --region "us-central1" --release-channel "regular" --network "projects/hamza-labs-1/global/networks/default" --subnetwork "projects/hamza-labs-1/regions/us-central1/subnetworks/default" --cluster-ipv4-cidr "/17" --services-ipv4-cidr "/22"
 ```
 
-## Build your Artificats using Cloud Build 
+### Build your Artificats using Cloud Build 
 ```
 gcloud artifacts repositories create petclinic-demo-repo --repository-format=maven --location=us-central1
 gcloud iam service-accounts create artifact-registry-sa --description="sa-for-artifact-registry" --display-name="SA_AR"
