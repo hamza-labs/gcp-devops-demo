@@ -64,14 +64,14 @@ gcloud artifacts repositories add-iam-policy-binding petclinic-demo --location=u
 
 ```
 
-## Store Your artifacts in Google Artifact Registry 
+### Store Your artifacts in Google Artifact Registry 
 ```
 ```
 
-## Deploy your app in GKE Autopilot using Cloud Deploy
+### Deploy your app in GKE Autopilot using Cloud Deploy
 ```
 ```
 
-## Operate your app using Cloud Operations
+### Operate your app using Cloud Operations
 ```
 ```
