@@ -1,7 +1,6 @@
 ## Google Cloud DevOps Toolchain! 
 ![alt text](https://github.com/hamza-labs/gcp-devops-demo/blob/main/img/devops-stack.png?raw=true)
 
-
 ### Option A Clone and Test your Petclinic app locally with the in-memory HyperSQL DB
 ```
 git clone 
@@ -9,6 +8,7 @@ cd petclinic-demo
 ./gradlew bootRun
 curl localhost:8080
 ```
+
 ## Option B Clone and Test your Petclinic app locally using Docker 
 ```
 git clone 
