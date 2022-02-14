@@ -1,7 +1,6 @@
 ## A Fully Serverless DevOps Stack on GCP!
 ![alt text](https://github.com/hamza-labs/gcp-devops-demo/blob/main/img/devops-stack.png?raw=true)
-
-## Welcome to this quick GCP DevOps Toolchain Demo! 
+- In this article, we gonna use the famous Petclinic Spring Boot Application to demonstrate different Google Cloud Services. 
 
 ### Step 1: Code 
 ```
