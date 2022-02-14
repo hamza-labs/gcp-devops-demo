@@ -1,4 +1,4 @@
-## TL;DR; If you are looking for a fully Serverless DevOps Toolchain, this is a good start using GCP
+## A Fully Serverless DevOps Stack on GCP!
 ![alt text](https://github.com/hamza-labs/gcp-devops-demo/blob/main/img/devops-stack.png?raw=true)
 
 ## Welcome to this quick GCP DevOps Toolchain Demo! 
