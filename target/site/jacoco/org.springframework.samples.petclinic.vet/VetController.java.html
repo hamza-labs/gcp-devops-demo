@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>VetController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">petclinic</a> &gt; <a href="index.source.html" class="el_package">org.springframework.samples.petclinic.vet</a> &gt; <span class="el_source">VetController.java</span></div><h1>VetController.java</h1><pre class="source lang-java linenums">/*
+ * Copyright 2012-2019 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package org.springframework.samples.petclinic.vet;
+
+import java.util.List;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+/**
+ * @author Juergen Hoeller
+ * @author Mark Fisher
+ * @author Ken Krebs
+ * @author Arjen Poutsma
+ */
+@Controller
+class VetController {
+
+	private final VetRepository vets;
+
+<span class="fc" id="L40">	public VetController(VetRepository clinicService) {</span>
+<span class="fc" id="L41">		this.vets = clinicService;</span>
+<span class="fc" id="L42">	}</span>
+
+	@GetMapping(&quot;/vets.html&quot;)
+	public String showVetList(@RequestParam(defaultValue = &quot;1&quot;) int page, Model model) {
+		// Here we are returning an object of type 'Vets' rather than a collection of Vet
+		// objects so it is simpler for Object-Xml mapping
+<span class="fc" id="L48">		Vets vets = new Vets();</span>
+<span class="fc" id="L49">		Page&lt;Vet&gt; paginated = findPaginated(page);</span>
+<span class="fc" id="L50">		vets.getVetList().addAll(paginated.toList());</span>
+<span class="fc" id="L51">		return addPaginationModel(page, paginated, model);</span>
+
+	}
+
+	private String addPaginationModel(int page, Page&lt;Vet&gt; paginated, Model model) {
+<span class="fc" id="L56">		List&lt;Vet&gt; listVets = paginated.getContent();</span>
+<span class="fc" id="L57">		model.addAttribute(&quot;currentPage&quot;, page);</span>
+<span class="fc" id="L58">		model.addAttribute(&quot;totalPages&quot;, paginated.getTotalPages());</span>
+<span class="fc" id="L59">		model.addAttribute(&quot;totalItems&quot;, paginated.getTotalElements());</span>
+<span class="fc" id="L60">		model.addAttribute(&quot;listVets&quot;, listVets);</span>
+<span class="fc" id="L61">		return &quot;vets/vetList&quot;;</span>
+	}
+
+	private Page&lt;Vet&gt; findPaginated(int page) {
+<span class="fc" id="L65">		int pageSize = 5;</span>
+<span class="fc" id="L66">		Pageable pageable = PageRequest.of(page - 1, pageSize);</span>
+<span class="fc" id="L67">		return vets.findAll(pageable);</span>
+	}
+
+	@GetMapping({ &quot;/vets&quot; })
+	public @ResponseBody Vets showResourcesVetList() {
+		// Here we are returning an object of type 'Vets' rather than a collection of Vet
+		// objects so it is simpler for JSon/Object mapping
+<span class="fc" id="L74">		Vets vets = new Vets();</span>
+<span class="fc" id="L75">		vets.getVetList().addAll(this.vets.findAll());</span>
+<span class="fc" id="L76">		return vets;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - PetclinicIntegrationTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>PetclinicIntegrationTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.springframework.samples.petclinic.html">org.springframework.samples.petclinic</a> &gt; PetclinicIntegrationTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.860s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testFindAll()</td>
+<td class="success">0.688s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testOwnerDetails()</td>
+<td class="success">1.172s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>03:36:28.409 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+03:36:28.424 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+03:36:28.480 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [org.springframework.samples.petclinic.PetclinicIntegrationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+03:36:28.494 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.springframework.samples.petclinic.PetclinicIntegrationTests], using SpringBootContextLoader
+03:36:28.500 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.springframework.samples.petclinic.PetclinicIntegrationTests]: class path resource [org/springframework/samples/petclinic/PetclinicIntegrationTests-context.xml] does not exist
+03:36:28.502 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.springframework.samples.petclinic.PetclinicIntegrationTests]: class path resource [org/springframework/samples/petclinic/PetclinicIntegrationTestsContext.groovy] does not exist
+03:36:28.502 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [org.springframework.samples.petclinic.PetclinicIntegrationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+03:36:28.503 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.springframework.samples.petclinic.PetclinicIntegrationTests]: PetclinicIntegrationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+03:36:28.608 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [org.springframework.samples.petclinic.PetclinicIntegrationTests]
+03:36:28.722 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/admin_/projects/gcp-devops-demo/spring-petclinic/build/classes/java/main/org/springframework/samples/petclinic/PetClinicApplication.class]
+03:36:28.724 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.springframework.samples.petclinic.PetClinicApplication for test class org.springframework.samples.petclinic.PetclinicIntegrationTests
+03:36:28.873 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [org.springframework.samples.petclinic.PetclinicIntegrationTests]: using defaults.
+03:36:28.874 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+03:36:28.900 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1cb3ec38, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@403132fc, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@71c5b236, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2cab9998, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2f7a7219, org.springframework.test.context.support.DirtiesContextTestExecutionListener@669513d8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3a1d593e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4a8a60bc, org.springframework.test.context.event.EventPublishingTestExecutionListener@361c294e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7859e786, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@285d851a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@314b8f2d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@664a9613, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5118388b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@15a902e7]
+03:36:28.908 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@2c177f9e testClass = PetclinicIntegrationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5db4c359 testClass = PetclinicIntegrationTests, locations = '{}', classes = '{class org.springframework.samples.petclinic.PetClinicApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@ff684e1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@9ef8eb7, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@305a0c5f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4372b9b6, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@c4ed84, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@1613674b], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; false]], class annotated with @DirtiesContext [false] with mode [null].
+03:36:28.927 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@2c177f9e testClass = PetclinicIntegrationTests, testInstance = org.springframework.samples.petclinic.PetclinicIntegrationTests@1601e47, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5db4c359 testClass = PetclinicIntegrationTests, locations = '{}', classes = '{class org.springframework.samples.petclinic.PetClinicApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@ff684e1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@9ef8eb7, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@305a0c5f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4372b9b6, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@c4ed84, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@1613674b], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; false, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]].
+03:36:28.984 [Test worker] DEBUG org.springframework.boot.ApplicationServletEnvironment - Activating profiles []
+03:36:28.986 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}
+
+
+              |\      _,,,--,,_
+             /,`.-'`'   ._  \-;;,_
+  _______ __|,4-  ) )_   .;.(__`'-'__     ___ __    _ ___ _______
+ |       | '---''(_/._)-'(_\_)   |   |   |   |  |  | |   |       |
+ |    _  |    ___|_     _|       |   |   |   |   |_| |   |       | __ _ _
+ |   |_| |   |___  |   | |       |   |   |   |       |   |       | \ \ \ \
+ |    ___|    ___| |   | |      _|   |___|   |  _    |   |      _|  \ \ \ \
+ |   |   |   |___  |   | |     |_|       |   | | |   |   |     |_    ) ) ) )
+ |___|   |_______| |___| |_______|_______|___|_|  |__|___|_______|  / / / /
+ ==================================================================/_/_/_/
+
+:: Built with Spring Boot :: 2.6.2
+
+
+2022-02-09 03:36:29.343  INFO 14904 --- [    Test worker] o.s.s.p.PetclinicIntegrationTests        : Starting PetclinicIntegrationTests using Java 11.0.14 on cs-782767703530-default with PID 14904 (started by admin_ in /home/admin_/projects/gcp-devops-demo/spring-petclinic)
+2022-02-09 03:36:29.345  INFO 14904 --- [    Test worker] o.s.s.p.PetclinicIntegrationTests        : The following profiles are active: mysql
+2022-02-09 03:36:30.587  INFO 14904 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-09 03:36:30.673  INFO 14904 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 2 JPA repository interfaces.
+2022-02-09 03:36:31.731  INFO 14904 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-02-09 03:36:31.746  INFO 14904 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-09 03:36:31.747  INFO 14904 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-09 03:36:31.911  INFO 14904 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-09 03:36:31.912  INFO 14904 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2538 ms
+2022-02-09 03:36:32.683  INFO 14904 --- [    Test worker] o.s.c.g.a.s.GcpCloudSqlAutoConfiguration : Default MYSQL JdbcUrl provider. Connecting to jdbc:mysql://google/petclinic?socketFactory=com.google.cloud.sql.mysql.SocketFactory&amp;cloudSqlInstance=hamza-labs-1:us-central1:mysql-instance with driver com.mysql.cj.jdbc.Driver
+2022-02-09 03:36:32.687  WARN 14904 --- [    Test worker] o.s.c.g.a.s.GcpCloudSqlAutoConfiguration : spring.datasource.username is not specified. Setting default username.
+2022-02-09 03:36:32.798  INFO 14904 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-09 03:36:32.913  INFO 14904 --- [    Test worker] c.g.cloud.sql.core.CoreSocketFactory     : Connecting to Cloud SQL instance [hamza-labs-1:us-central1:mysql-instance] via SSL socket.
+2022-02-09 03:36:32.914  INFO 14904 --- [    Test worker] c.g.cloud.sql.core.CoreSocketFactory     : First Cloud SQL connection, generating RSA key pair.
+2022-02-09 03:36:34.565  INFO 14904 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-09 03:36:34.668  INFO 14904 --- [onnection adder] c.g.cloud.sql.core.CoreSocketFactory     : Connecting to Cloud SQL instance [hamza-labs-1:us-central1:mysql-instance] via SSL socket.
+2022-02-09 03:36:34.979  INFO 14904 --- [onnection adder] c.g.cloud.sql.core.CoreSocketFactory     : Connecting to Cloud SQL instance [hamza-labs-1:us-central1:mysql-instance] via SSL socket.
+2022-02-09 03:36:35.280  INFO 14904 --- [onnection adder] c.g.cloud.sql.core.CoreSocketFactory     : Connecting to Cloud SQL instance [hamza-labs-1:us-central1:mysql-instance] via SSL socket.
+2022-02-09 03:36:35.582  INFO 14904 --- [onnection adder] c.g.cloud.sql.core.CoreSocketFactory     : Connecting to Cloud SQL instance [hamza-labs-1:us-central1:mysql-instance] via SSL socket.
+2022-02-09 03:36:35.896  INFO 14904 --- [onnection adder] c.g.cloud.sql.core.CoreSocketFactory     : Connecting to Cloud SQL instance [hamza-labs-1:us-central1:mysql-instance] via SSL socket.
+2022-02-09 03:36:36.201  INFO 14904 --- [onnection adder] c.g.cloud.sql.core.CoreSocketFactory     : Connecting to Cloud SQL instance [hamza-labs-1:us-central1:mysql-instance] via SSL socket.
+2022-02-09 03:36:36.503  INFO 14904 --- [onnection adder] c.g.cloud.sql.core.CoreSocketFactory     : Connecting to Cloud SQL instance [hamza-labs-1:us-central1:mysql-instance] via SSL socket.
+2022-02-09 03:36:36.806  INFO 14904 --- [onnection adder] c.g.cloud.sql.core.CoreSocketFactory     : Connecting to Cloud SQL instance [hamza-labs-1:us-central1:mysql-instance] via SSL socket.
+2022-02-09 03:36:37.109  INFO 14904 --- [onnection adder] c.g.cloud.sql.core.CoreSocketFactory     : Connecting to Cloud SQL instance [hamza-labs-1:us-central1:mysql-instance] via SSL socket.
+2022-02-09 03:36:38.319  INFO 14904 --- [    Test worker] org.ehcache.core.EhcacheManager          : Cache 'vets' created in EhcacheManager.
+2022-02-09 03:36:38.329  INFO 14904 --- [    Test worker] org.ehcache.jsr107.Eh107CacheManager     : Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=urn.X-ehcache.jsr107-default-config,Cache=vets
+2022-02-09 03:36:38.341  INFO 14904 --- [    Test worker] org.ehcache.jsr107.Eh107CacheManager     : Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=urn.X-ehcache.jsr107-default-config,Cache=vets
+2022-02-09 03:36:38.498  INFO 14904 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-09 03:36:38.551  INFO 14904 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-02-09 03:36:38.761  INFO 14904 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-02-09 03:36:39.047  INFO 14904 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-02-09 03:36:40.170  INFO 14904 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-09 03:36:40.180  INFO 14904 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-09 03:36:42.363  INFO 14904 --- [    Test worker] o.s.c.g.core.DefaultCredentialsProvider  : Default credentials provider for Google Compute Engine.
+2022-02-09 03:36:42.363  INFO 14904 --- [    Test worker] o.s.c.g.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2022-02-09 03:36:42.373  INFO 14904 --- [    Test worker] o.s.c.g.a.c.GcpContextAutoConfiguration  : The default project ID is hamza-labs-1
+2022-02-09 03:36:42.892  INFO 14904 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-02-09 03:36:43.102  INFO 14904 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 42283 (http) with context path ''
+2022-02-09 03:36:43.140  INFO 14904 --- [    Test worker] o.s.s.p.PetclinicIntegrationTests        : Started PetclinicIntegrationTests in 14.153 seconds (JVM running for 15.934)
+2022-02-09 03:36:44.011  INFO 14904 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-09 03:36:44.011  INFO 14904 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-09 03:36:44.013  INFO 14904 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.3.1</a> at Feb 9, 2022, 3:36:54 AM</p>
+</div>
+</div>
+</body>
+</html>

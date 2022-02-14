@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.springframework.samples.petclinic.owner.OwnerControllerTests" tests="11" skipped="0" failures="0" errors="0" timestamp="2022-02-09T03:36:46" hostname="cs-782767703530-default" time="0.362">
+  <properties/>
+  <testcase name="testProcessUpdateOwnerFormHasErrors()" classname="org.springframework.samples.petclinic.owner.OwnerControllerTests" time="0.161"/>
+  <testcase name="testProcessCreationFormSuccess()" classname="org.springframework.samples.petclinic.owner.OwnerControllerTests" time="0.01"/>
+  <testcase name="testInitFindForm()" classname="org.springframework.samples.petclinic.owner.OwnerControllerTests" time="0.021"/>
+  <testcase name="testShowOwner()" classname="org.springframework.samples.petclinic.owner.OwnerControllerTests" time="0.037"/>
+  <testcase name="testInitUpdateOwnerForm()" classname="org.springframework.samples.petclinic.owner.OwnerControllerTests" time="0.019"/>
+  <testcase name="testInitCreationForm()" classname="org.springframework.samples.petclinic.owner.OwnerControllerTests" time="0.018"/>
+  <testcase name="testProcessFindFormByLastName()" classname="org.springframework.samples.petclinic.owner.OwnerControllerTests" time="0.012"/>
+  <testcase name="testProcessFindFormNoOwnersFound()" classname="org.springframework.samples.petclinic.owner.OwnerControllerTests" time="0.017"/>
+  <testcase name="testProcessFindFormSuccess()" classname="org.springframework.samples.petclinic.owner.OwnerControllerTests" time="0.025"/>
+  <testcase name="testProcessUpdateOwnerFormSuccess()" classname="org.springframework.samples.petclinic.owner.OwnerControllerTests" time="0.007"/>
+  <testcase name="testProcessCreationFormHasErrors()" classname="org.springframework.samples.petclinic.owner.OwnerControllerTests" time="0.023"/>
+  <system-out><![CDATA[2022-02-09 03:36:45.094  INFO 14904 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.springframework.samples.petclinic.owner.OwnerControllerTests], using SpringBootContextLoader
+2022-02-09 03:36:45.095  INFO 14904 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [org.springframework.samples.petclinic.owner.OwnerControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-02-09 03:36:45.095  INFO 14904 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.springframework.samples.petclinic.owner.OwnerControllerTests]: OwnerControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-02-09 03:36:45.121  INFO 14904 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.springframework.samples.petclinic.PetClinicApplication for test class org.springframework.samples.petclinic.owner.OwnerControllerTests
+2022-02-09 03:36:45.122  INFO 14904 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-02-09 03:36:45.123  INFO 14904 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5dca1c50, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7a36c310, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@491b5bd9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3bd69a51, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@36f329e7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7a11426a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@69c70b62, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@664c0019, org.springframework.test.context.event.EventPublishingTestExecutionListener@495fa126, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@392da875, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@68603829, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6e2ab1f4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5a487b86, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@ef21eba, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@673ade3d]
+
+
+              |\      _,,,--,,_
+             /,`.-'`'   ._  \-;;,_
+  _______ __|,4-  ) )_   .;.(__`'-'__     ___ __    _ ___ _______
+ |       | '---''(_/._)-'(_\_)   |   |   |   |  |  | |   |       |
+ |    _  |    ___|_     _|       |   |   |   |   |_| |   |       | __ _ _
+ |   |_| |   |___  |   | |       |   |   |   |       |   |       | \ \ \ \
+ |    ___|    ___| |   | |      _|   |___|   |  _    |   |      _|  \ \ \ \
+ |   |   |   |___  |   | |     |_|       |   | | |   |   |     |_    ) ) ) )
+ |___|   |_______| |___| |_______|_______|___|_|  |__|___|_______|  / / / /
+ ==================================================================/_/_/_/
+
+:: Built with Spring Boot :: 2.6.2
+
+
+2022-02-09 03:36:45.181  INFO 14904 --- [    Test worker] o.s.s.p.owner.OwnerControllerTests       : Starting OwnerControllerTests using Java 11.0.14 on cs-782767703530-default with PID 14904 (started by admin_ in /home/admin_/projects/gcp-devops-demo/spring-petclinic)
+2022-02-09 03:36:45.181  INFO 14904 --- [    Test worker] o.s.s.p.owner.OwnerControllerTests       : The following profiles are active: mysql
+2022-02-09 03:36:46.157  INFO 14904 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-02-09 03:36:46.157  INFO 14904 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-02-09 03:36:46.158  INFO 14904 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2022-02-09 03:36:46.172  INFO 14904 --- [    Test worker] o.s.s.p.owner.OwnerControllerTests       : Started OwnerControllerTests in 1.039 seconds (JVM running for 18.966)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

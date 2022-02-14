@@ -1,8 +1,4 @@
-## A Fully Serverless DevOps Stack on GCP!
-- This article aims to demonstrate how we can use Google Cloud Services From Coding to operating your apps. 
-- You only need a Browser! 
-
-![alt text](https://github.com/hamza-labs/gcp-devops-demo/blob/main/img/devops-stack.png?raw=true)
+# Welcome to this quick GCP DevOps Toolchain Demo! 
 
 ### Step 1: Code 
 ```
