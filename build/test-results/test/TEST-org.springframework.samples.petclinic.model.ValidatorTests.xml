@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.springframework.samples.petclinic.model.ValidatorTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-02-09T03:36:45" hostname="cs-782767703530-default" time="0.058">
-  <properties/>
-  <testcase name="shouldNotValidateWhenFirstNameEmpty()" classname="org.springframework.samples.petclinic.model.ValidatorTests" time="0.058"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
