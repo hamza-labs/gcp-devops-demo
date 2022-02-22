@@ -1,0 +1,8 @@
+steps:
+# deploy to Google Cloud Run
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['run', 'deploy', 'petclinic', '--image', 'us-central1-docker.pkg.dev/hamzalabs/petclinic-artifact-repo/petclinic:latest',
+  '--region', 'us-central1', '--allow-unauthenticated', 
+   '--cpu=2', '--memory=512M',
+  '--service-account', 'petclinic@hamzalabs.iam.gserviceaccount.com', 
+  '--add-cloudsql-instances=hamzalabs:us-central1:petclinic-mysql-instance']
