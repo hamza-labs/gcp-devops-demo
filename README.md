@@ -101,7 +101,7 @@ nano cloudbuild.yaml // insert this code to deploy the app using cloud build to 
   args: ['run', 'deploy', 'petclinic', '--image', 'us-central1-docker.pkg.dev/hamzalabs/petclinic-artifact-repo/petclinic:latest',
   '--region', 'us-central1', '--allow-unauthenticated', 
    '--cpu=2', '--memory=512M',
-  '--service-account', 'petclinic@hamzalabs.iam.gserviceaccount.com', 
+  '--service-account', 'SERVICE_ACCOUNT_ID@PROJECT_ID.iam.gserviceaccount.com', 
   '--add-cloudsql-instances=hamzalabs:us-central1:petclinic-mysql-instance']
 ```
 
