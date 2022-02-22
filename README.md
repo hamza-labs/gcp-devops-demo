@@ -1,7 +1,6 @@
 # Welcome to this quick GCP DevOps Toolchain Demo! 
 
-![alt text](https://raw.githubusercontent.com/hamza-labs/gcp-devops-demo/main/src/main/resources/static/resources/images/devsecops.png?token=GHSAT0AAAAAABRAIP4GSN6VAWJFNKCNULSOYQUKDOQ)
-
+<img src="https://github.com/hamza-labs/gcp-devops-demo/blob/main/src/main/resources/static/resources/images/gcp-devops-stack.png?raw=true" width="650">
 
 ### Step 1: Code and Clone your Repo! 
 
