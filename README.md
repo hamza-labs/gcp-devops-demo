@@ -101,7 +101,7 @@ nano cloudbuild.yaml // insert this code to deploy the app using cloud build to 
   '--region', 'us-central1', '--allow-unauthenticated', 
    '--cpu=2', '--memory=512M',
   '--service-account', 'SERVICE_ACCOUNT_ID@PROJECT_ID.iam.gserviceaccount.com', 
-  '--add-cloudsql-instances=hamzalabs:us-central1:petclinic-mysql-instance']
+  '--add-cloudsql-instances=hamzalabs:your_petclinic_mysql-connection_name']
 ```
 
 ```
