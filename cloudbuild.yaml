@@ -6,7 +6,7 @@ steps:
   args: ['build','--builder=gcr.io/buildpacks/builder', 
   '--publish', 'us-central1-docker.pkg.dev/hamzalabs/petclinic-artifact-repo/petclinic:latest']
 
-# Deploy your app using Cloud Build to Google Cloud Run!!
+# Deploy your app using Cloud Build to Google Cloud Run!!!!
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['run', 'deploy', 'petclinic', '--image', 'us-central1-docker.pkg.dev/hamzalabs/petclinic-artifact-repo/petclinic:latest',
   '--region', 'us-central1', '--allow-unauthenticated', 
